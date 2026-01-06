@@ -11,6 +11,9 @@ import { NotificationsPage } from "./components/NotificationsPage";
 import { SettingsPage } from "./components/SettingsPage";
 import { DashboardPage } from "./components/DashboardPage";
 import { FollowingPage } from "./components/FollowingPage";
+import { LoginPage, SignupPage, ForgotPasswordPage } from "./components/AuthPages";
+import { OnboardingPage } from "./components/OnboardingPage";
+import { PricingPage, HelpPage, AboutPage, NotFoundPage } from "./components/AdditionalPages";
 import { Card, CardContent } from "./components/ui/card";
 import { Sparkles, BookOpen, Users, Zap } from "lucide-react";
 
@@ -46,6 +49,22 @@ export default function App() {
         return <DashboardPage onNavigate={handleNavigate} />;
       case "following":
         return <FollowingPage />;
+      case "login":
+        return <LoginPage onNavigate={handleNavigate} />;
+      case "signup":
+        return <SignupPage onNavigate={handleNavigate} />;
+      case "forgotpassword":
+        return <ForgotPasswordPage onNavigate={handleNavigate} />;
+      case "onboarding":
+        return <OnboardingPage onNavigate={handleNavigate} />;
+      case "pricing":
+        return <PricingPage onNavigate={handleNavigate} />;
+      case "help":
+        return <HelpPage onNavigate={handleNavigate} />;
+      case "about":
+        return <AboutPage onNavigate={handleNavigate} />;
+      case "notfound":
+        return <NotFoundPage onNavigate={handleNavigate} />;
       default:
         return <HomePage onNavigate={handleNavigate} />;
     }
